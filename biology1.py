@@ -10,16 +10,10 @@
 #the six continents excluding antarctica
 
 #specifications of the disease under consideration:
-#It infects humans and livestock.
+#It infects humans.
 
 #is aquatic life affected by it?
 #yes
-
-#is there any corelation between the extent of disease manifestation in a aquatic life form and non-aquatic life form?
-#It certatinly does.
-
-#What is correaltion?
-#The aquatic life is less affected bythe disease under consideration
 
 #What are the parameters involved with any disease in the code?
 #virulence, resistance, reproduction, locale, migratability, lifespan
@@ -63,6 +57,7 @@
 #system time will be used to change certain variables 
 #for some choices, user will be awarded points and for the others, be penalised
 #overtime, depending on the choices the player makes
+
 input("Are you fed up of the overpopulation issue or just want to outright kill people and livestock. If yes, press enter.")
 welcome="Welcome to the party , Plaque-Mongerer!"
 print(welcome)
@@ -124,17 +119,25 @@ input()
 inst14="Go on now!"
 print(inst14)
 input()
+accepted_strings1={'Asia','Africa','Australia','Europe','North America','South America'}
 continent=input("Enter the continent : ")
 input()
+while continent not in accepted_strings1:
+	print("You did not select a continent from the list! Select again")
+	continent=input("Enter a continent from the catalogue : ")
 demographic_demarcation=input("Enter the demographic demarcation : ")
 input()
+accepted_strings2={'Desert','Rainforest','Cold Mountains','Plains','Dry Lands','Coasts'}
+while demographic_demarcation not in accepted_strings2:
+	print("You did not select a demographic demarcation from the catalogue!")
+	demographic_demarcation=input("Enter a demographic demarcation from the catalogue : ")
 inst15="Now that you have started infecting"
 inst15_1="You get to add 1 point to the following characteristics of"
 print(inst15,demographic_demarcation,"of",continent)
 input()
 print(inst15_1,name)
 input()
-disease_char=[['Virulence'],['Resistance'],['Lifespan'],['Reproduction'],['Locale'],['Migratability']]
+disease_char=[['Virulence'],['Resistance'],['Migration'],['Reproduction']]
 for i in range(len(disease_char)):
 	for j in range(len(disease_char[i])):
 		print(disease_char[i][j])
@@ -145,6 +148,19 @@ print(inst16,name,inst16_1)
 input()
 initial_disease_stat=input("Enter a characteristic : ")
 input()
+accepted_strings3={"Virulence","Resistance","Reproduction","Migration"}
+while initial_disease_stat not in accepted_strings3:
+	print("Please enter the proper stat again!")
+	initial_disease_stat=input("Enter a proper characteristic from the catalogue : ")
+virulence=resistance=reproduction=migration=0
+if initial_disease_stat=="Virulence":
+	virulence=virulence+1
+elif initial_disease_stat=="Resistance":
+	resistance=resistance+1
+elif initial_disease_stat=="Reproduction":
+	reproduction=reproduction+1
+elif initial_disease_stat=="Migration":
+	migration=migration+1
 inst17="Okay, listen up, Plaque-Mongerer! You have started the fire in the hearts of people living in the"
 inst17_1="They think this is just another disease. Prove them wrong or let them have their fun!"
 inst17_2="1 second in our game time is 5 days in real life. Something interesting happens every 10 seconds."
@@ -167,13 +183,24 @@ input()
 print(inst17_4)
 input()
 loop_num=0
-# What should i do now ? 
-#Define some variables
-virulence, resistance, reproduction, locale, lifespan, migratability
-infection_rate, local_infection_rate, mortality_rate, local_mortality_rate, research_rate, local_research_rate,
-research_output_rate, local_research_output_rate, cure_rate, local_cure_rate,
-fraction_of_present_demographic_demarcation_infected, local_migration_rate, air_passengers_exchange_rate, 
-water_passengers_excahnge_rate, livestock_virulence, livestock_resistance, livestock_reproduction, 
-livestock_locale, livestock_lifespan, livestock_migratability, mobility_of_livestock, 
-mobility_of_infected_livestock, lifespan_humans,lifespan_livestock,lifespan_aqlife,mobility_aqlife,
-mobility_infected_aqlife,time_of_the_game, number_of_loops, total_death_count, local_death_count, 
+inst18="Your stats are as follows : "
+print(inst18)
+input()
+print("Virulence :",virulence)
+print("Resistance :",resistance)
+print("Reproduction :",reproduction)
+print("Migration :",migration)
+print("Locale :",demographic_demarcation)
+input()
+present_demographic_demarcation=
+x=present_demographic_demarcation
+infection_rate=reproduction+migration+x #(x=10 if locale=demoreg else x=0)
+mortality_rate=mortrate=viru+resist+x #(x=10 if locale=demoreg else x=0)
+research_rate=infection_rate+mortality_rate-x #(x=10 if locale=demoreg else x=0) 
+research_output_rate=y+virulence #(y here is some stuff that depemds on the locale)
+cure_rate=y
+fraction_of_present_demographic_demarcation_infected=, 
+air_passengers_exchange_rate=z #(z==100 if infection rate <=30, z==75 if infection rate<=50, z==50 if infection rate<=60, z==25 if infection rate<=75, z=="CODE RED" if infection frate >=90) 
+water_passengers_excahnge_rate=z-10
+time_of_the_game=clocktime
+number_of_loops=loop_num 
