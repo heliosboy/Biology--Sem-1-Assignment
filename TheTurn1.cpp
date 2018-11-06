@@ -392,8 +392,8 @@ int main()
   cout<<"Every disease has a 'Homeground' or its Locale. This is where it is the strongest."<<endl;
   cout<<"There are places where this disease is useless!"<<endl;
   cout<<"Keep this in your mind and proceed with the game!"<<endl;
-  cout<<"When you are prompted to enter the name of your weapon, enter a numBER from 1 to 4."<<endl;
-  cout<<"RememBER, each disease is numBER coded."<<endl;
+  cout<<"When you are prompted to enter the name of your weapon, enter a number from 1 to 4."<<endl;
+  cout<<"Remember, each disease is number coded."<<endl;
   cout<<"Drumroll: "<<endl;
   for (int i=0;i<10;i++)
     {
@@ -405,21 +405,21 @@ int main()
   cout<<"Its symptoms include high fever, fatigue, flu-like symptoms, shock, and in later stages, meningitis. "<<endl;
   cout<<"A recent developments in biowarfare created inhalatory anthrax, the most dangerous form of anthrax you can get."<<endl;
   cout<<"Anthrax is strong in Coasts, Mountains, and Plains Biomes, but is weak in Forests and Desert-Plateau-Mesa Biomes."<<endl;
-  cout<<"Press any numBER to continue."<<endl;
+  cout<<"Press any number to continue."<<endl;
   cin>>a;
   cout<<"CHOLERA."<<endl;
   cout<<"Caused by the bacterium Vibrio cholerae, Cholera is spread through contaminated water."<<endl;
   cout<<"The rampant pollution of drinking water sources has led to cholera being a highly communicable disease."<<endl;
   cout<<"Its symptoms include diarrhoea, dehydration, vomiting and cramps."<<endl;
   cout<<"Cholera is strong in Desert-Plateau-Mesa, Coasts, and Island Biomes, but is weak in Mountain biomes."<<endl;
-  cout<<"Press any numBER to continue."<<endl;
+  cout<<"Press any number to continue."<<endl;
   cin>>b;
   cout<<"TUBERCULOSIS."<<endl;
   cout<<"Caused by the bacterium Mycobacterium tuBERculosis, tuBERculosis, a.k.a. consumption, phthisis or just TB, is a deadly disease that spreads via air."<<endl;
   cout<<"Increasing population presents a problem in maintaining people at a 'safe' distance."<<endl;
   cout<<"This could be a jackpot!"<<endl;
   cout<<"TuBERculosis is strong in Mountains, Forests, and Island biomes, but is weak in Plains biomes."<<endl;
-  cout<<"Press any numBER to continue."<<endl;
+  cout<<"Press any number to continue."<<endl;
   cin>>c;
   cout<<"Bubonic Plague. The only disease that does not need bold case."<<endl;
   cout<<"Caused by the bacterium Yersinia pestis, mainly spreads through the bite of an infected flea."<<endl;
